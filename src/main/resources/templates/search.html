@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Books - Amazin Bookstore</title>
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+</head>
+<body>
+<header>
+    <nav>
+        <div class="logo">
+            <img th:src="@{/images/logo.png}" alt="Amazin Bookstore Logo">
+        </div>
+        <ul class="navigation">
+            <li><a th:href="@{/}">Home</a></li>
+            <li><a th:href="@{/search}">Search</a></li>
+            <li><a th:href="@{/cart}">Cart</a></li>
+            <li><a th:href="@{/checkout}">Checkout</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="search-section">
+        <h1>Search for Books</h1>
+        <form id="search-form">
+            <input type="text" id="search-query" placeholder="Enter book title, author, or ISBN" required>
+            <button type="submit">Search</button>
+        </form>
+        <div id="search-results">
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2023 Amazin Bookstore. All rights reserved.</p>
+</footer>
+
+<script th:src="@{/js/search.js}"></script>
+</body>
+</html>

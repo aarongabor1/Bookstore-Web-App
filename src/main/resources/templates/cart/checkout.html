@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout</title>
+    <link rel="stylesheet" th:href="@{/css/checkout.css}">
+    <link rel="stylesheet" th:href="@{/css/navbar.css}">
+    <link rel="stylesheet" th:href="@{/css/mousetrail.css}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <script th:src="@{/js/checkout.js}" defer></script>
+    <script th:src="@{/js/mousetrail.js}"></script>
+</head>
+<body>
+<nav class="navbar">
+    <ul>
+        <li><a th:href="@{/}">Home</a></li>
+        <li><a th:href="@{/cart}">Cart</a></li>
+        <li><a th:href="@{/checkout}">Checkout</a></li>
+    </ul>
+</nav>
+<h1>Checkout</h1>
+<p>Total Amount: <span id="totalAmount">$0.00</span></p>
+
+
+<form id="checkout-form">
+    <h2>Bank Details</h2>
+    <div class="section" id="bank-details">
+        <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+        <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+        <input type="text" id="cardNumber" name="cardNumber" placeholder="Card Number" required>
+        <input type="text" id="ccv" name="ccv" placeholder="CCV" required>
+        <input type="month" id="expiryDate" name="expiryDate" placeholder="Expiry Date" required>
+    </div>
+
+    <h2>Address</h2>
+    <div class="section" id="address-details">
+        <input type="text" id="city" name="city" placeholder="City" required>
+        <input type="text" id="country" name="country" placeholder="Country" required>
+        <input type="text" id="postalCode" name="postalCode" placeholder="Postal Code" required>
+    </div>
+
+    <button type="submit" id="confirm-order" onclick="window.location.href='confirmation'">Confirm Order</button>
+</form>
+
+<script src="../../static/js/checkout.js"></script>
+</body>
+</html>

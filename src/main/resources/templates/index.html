@@ -1,0 +1,46 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Bookstore</title>
+    <link rel="stylesheet" th:href="@{/css/index.css}">
+    <link rel="stylesheet" th:href="@{/css/navbar.css}">
+    <link rel="stylesheet" th:href="@{/css/mousetrail.css}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <style>
+        .small-container {
+            max-width: 600px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+<div id="mouse-trail-container"></div>
+<div class="container small-container">
+    <header>
+        <nav class="navbar" role="navigation">
+            <ul>
+                <li><a th:href="@{/}">Home</a></li>
+                <li><a th:href="@{/cart}">Cart</a></li>
+                <li><a th:href="@{/checkout}">Checkout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <h1>Amazin Bookstore <i class="fa fa-book"></i></h1>
+        <input type="text" id="filterInput" onkeyup="filterUpdate()" placeholder="Filter for book title...">
+        <div id="books-container"></div>
+        <div class="recommended-books">
+            <h2>Recommended Books</h2>
+            <div id="recommendations-container"></div>
+        </div>
+        <a th:href="@{/cart}" class="button primary view-cart-btn">View Shopping Cart</a>
+    </main>
+</div>
+
+<script th:src="@{/js/index.js}"></script>
+<script src="https://kit.fontawesome.com/6ba355e457.js" crossorigin="anonymous"></script>
+<script th:src="@{/js/mousetrail.js}"></script>
+</body>
+</html>

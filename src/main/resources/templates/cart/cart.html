@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Cart</title>
+    <link rel="stylesheet" th:href="@{/css/cart.css}">
+    <link rel="stylesheet" th:href="@{/css/navbar.css}">
+    <link rel="stylesheet" th:href="@{/css/mousetrail.css}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <script th:src="@{/js/mousetrail.js}"></script>
+    <script th:src="@{/js/cart.js}" defer></script>
+
+<body>
+<nav class="navbar">
+    <ul>
+        <li><a th:href="@{/}">Home</a></li>
+        <li><a th:href="@{/cart}">Cart</a></li>
+        <li><a th:href="@{/checkout}">Checkout</a></li>
+    </ul>
+</nav>
+<div class="container">
+    <h1>Your Shopping Cart</h1>
+    <table id="cart-content">
+        <thead>
+        <tr>
+            <th>Cover</th>
+            <th>Title</th>
+            <th>ISBN</th>
+            <th>Author</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+    <tbody>
+
+    </tbody>
+</table>
+<div id="cart-totals">
+    <p>Subtotal: <span id="SubtotalAmount">$0.00</span></p>
+    <p>Taxes: <span id="TaxesAmount">$0.00</span></p>
+    <p>Total: <span id="TotalAmount">$0.00</span></p>
+    <button id="checkout-btn" onclick="window.location.href='checkout'">Proceed to Checkout</button>
+</div>
+
+</body>
+</html>

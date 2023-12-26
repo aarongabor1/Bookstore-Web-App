@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Confirmation</title>
+    <link rel="stylesheet" th:href="@{/css/mousetrail.css}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet" th:href="@{/css/confirmation.css}">
+    <script th:src="@{/js/mousetrail.js}"></script>
+</head>
+<body>
+<div class="confirmation-wrapper">
+    <h1>Thank You for Your Order!</h1>
+    <p>Your order has been placed successfully.</p>
+    <div class="order-details">
+        <p><strong>Order Number:</strong> <span id="order-id">123456</span></p>
+    </div>
+    <p>We've sent a confirmation email with your order details.</p>
+    <a th:href="@{/}" class="continue-shopping-btn">Continue Shopping</a>
+</div>
+<script th:src="@{/js/confirmation.js}"></script>
+</body>
+</html>

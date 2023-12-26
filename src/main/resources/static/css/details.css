@@ -1,0 +1,63 @@
+h1
+{
+    color: black;
+    font-family: serif;
+    font-size: 300%;
+    text-align: left;
+    height: auto;
+    width: auto;
+}
+
+h2
+{
+    color: black;
+    font-family: serif;
+    font-size: 200%;
+    text-align: left;
+    height: auto;
+    width: auto;
+}
+
+h3
+{
+    color: black;
+    font-family: serif;
+    font-size: 150%;
+    text-align: left;
+    height: auto;
+    width: auto;
+}
+
+h4
+{
+    color: black;
+    font-family: serif;
+    font-size: 125%;
+    text-align: left;
+    height: auto;
+    width: auto;
+}
+
+p
+{
+    color: black;
+    font-family: serif;
+    font-size: 100%;
+    text-align: left;
+    height: auto;
+    width: auto;
+}
+
+footer {
+    text-align: center;
+    font-family: serif;
+    font-size: 50%;
+}
+
+img
+{
+    display: block;
+    border: none;
+    max-height: 100%;
+    max-width: 100%;
+}
